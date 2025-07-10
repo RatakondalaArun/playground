@@ -9,4 +9,6 @@ This folder contains encoding and decoding algorithms
 - It is not good at handling random none repetative data
 - It is good at compressing image data where there is similar colors
 
+[Implementation](./rle_encoding.js)
+
 [Wiki article](https://en.wikipedia.org/wiki/Run-length_encoding)
