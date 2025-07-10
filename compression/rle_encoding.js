@@ -42,16 +42,19 @@ function decode(str) {
   return decompressedString;
 }
 
-const testStr = 'AAABBBBCCCCDDD';
+const testStr = 'ABCD';
 
 const compressedString = encode(testStr);
 const decompressedString = decode(compressedString);
 
-console.log(`${testStr} -> ${compressedString}`);
-console.log(`${compressedString} -> ${decompressedString}`);
 console.log(`
+
+Run-Length Encoding
+
+[${testStr}] -(encode)-> [${compressedString}] -(decode)-> [${decompressedString}]
+
 Size:
-- teststring: ${testStr.length * 2} bytes
+- test string: ${testStr.length * 2} bytes
 - compressed: ${compressedString.length * 2} bytes
 - decompressed: ${decompressedString.length * 2} bytes
 - % of bytes saved: ${Math.round(((testStr.length * 2 - compressedString.length * 2) / (testStr.length * 2)) * 100)} %
